@@ -5,9 +5,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/users': 'http://localhost:5000',
-      '/claim': 'http://localhost:5000',
-      '/history': 'http://localhost:5000',
+      '/users': 'http://localhost:10000',
+      '/claim': 'http://localhost:10000',
+      '/history': 'http://localhost:10000',
     }
   }
 })
