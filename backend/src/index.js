@@ -22,7 +22,7 @@ app.use(cors()) // For development, keep this
 // Serve React build in production
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const buildPath = path.join(__dirname, '../../frontend/build')
+const buildPath = path.resolve(__dirname, '../../frontend/dist')
 
 // Serve React build in production only if build folder exists
 if (process.env.NODE_ENV === 'production' && fs.existsSync(buildPath)) {
