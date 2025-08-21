@@ -1,4 +1,5 @@
-const API_BASE = ""; // Vite proxy handles /users, /claim, /history
+// Set your backend API base URL here
+export const API_BASE = "https://w3-assignment-backend.onrender.com";
 
 export async function getUsers() {
   try {

@@ -39,4 +39,15 @@
 body {
   background: linear-gradient(135deg, #ffb6c1 0%, #ffe066 50%, #c3a1e6 100%);
   min-height: 100vh;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+@media (max-width: 640px) {
+  body {
+    padding: 0 2px;
+  }
+  .card-3d {
+    padding: 1rem !important;
+  }
 }

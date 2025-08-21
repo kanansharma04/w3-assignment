@@ -32,7 +32,7 @@ function Navbar() {
 export default function App() {
   return (
     <Router>
-      <div className="max-w-3xl mx-auto p-4">
+      <div className="max-w-3xl mx-auto w-full px-2 sm:px-4 py-2 sm:py-4">
         <Navbar />
         <Routes>
           <Route path="/" element={<LeaderboardPage />} />

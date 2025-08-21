@@ -1,7 +1,7 @@
 export default function UserSelector({ users, selectedUser, setSelectedUser }) {
   return (
     <select
-      className="border p-2 rounded w-full md:w-auto"
+      className="border p-2 rounded w-full"
       value={selectedUser}
       onChange={e => setSelectedUser(e.target.value)}
     >

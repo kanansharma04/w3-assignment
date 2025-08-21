@@ -138,7 +138,18 @@ app.get('/', (req, res) => {
   res.send('🎰 Welcome to the Funky Leaderboard API! 🎰')
 })
 
+// Global error handler
+app.use((err, req, res, next) => {
+  logFunky('💥 Uncaught error: ' + (err.message || err), '\x1b[31m')
+  res.status(500).json({ error: err.message || 'Internal Server Error' })
+})
+
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:' + (process.env.PORT || 5000)
+
 const PORT = process.env.PORT || 5000
-app.listen(PORT, () => logFunky(`🚦 Server running on port ${PORT} 🚦`, '\x1b[32m'))
+app.listen(PORT, () => {
+  logFunky(`🚦 Server running on port ${PORT} 🚦`, '\x1b[32m')
+  logFunky(`🌐 Backend URL: ${BACKEND_URL}`, '\x1b[36m')
+})
 
 

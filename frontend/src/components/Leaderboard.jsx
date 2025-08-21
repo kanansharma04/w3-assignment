@@ -12,9 +12,9 @@ const rowColors = [
 
 export default function Leaderboard({ leaderboard, selectedUser }) {
   return (
-    <div className="mb-2 animate-fade-in">
+    <div className="mb-2 animate-fade-in overflow-x-auto w-full">
       <h2 className="text-2xl font-extrabold mb-4 text-blue-600 text-center drop-shadow-lg">Leaderboard</h2>
-      <table className="w-full rounded-xl overflow-hidden shadow-2xl">
+      <table className="w-full min-w-[340px] rounded-xl overflow-hidden shadow-2xl">
         <thead>
           <tr className="bg-gradient-to-r from-pink-400 via-yellow-300 to-purple-400 text-white text-lg">
             <th className="p-3">Rank</th>
