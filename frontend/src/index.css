@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.7s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+  .animate-bounce {
+    animation: bounce 1s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0);}
+    50% { transform: translateY(-12px);}
+  }
+  .card-3d {
+    box-shadow: 0 8px 32px 0 rgba(60, 60, 60, 0.18), 0 1.5px 6px 0 rgba(60, 60, 60, 0.12);
+    border-radius: 1.25rem;
+    background: #fff;
+    transition: box-shadow 0.3s, transform 0.3s;
+    transform: perspective(800px) rotateX(1deg) scale(1.01);
+  }
+  .card-3d:hover {
+    box-shadow: 0 16px 48px 0 rgba(60, 60, 60, 0.25), 0 3px 12px 0 rgba(60, 60, 60, 0.18);
+    transform: perspective(800px) rotateX(0deg) scale(1.03);
+  }
+  .row-funky {
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  .row-funky:hover {
+    background: #ffe4e1;
+    box-shadow: 0 2px 8px 0 rgba(255,105,180,0.12);
+  }
+}
+body {
+  background: linear-gradient(135deg, #ffb6c1 0%, #ffe066 50%, #c3a1e6 100%);
+  min-height: 100vh;
+}
